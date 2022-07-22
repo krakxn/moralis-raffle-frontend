@@ -1,14 +1,14 @@
 import { useWeb3Contract } from "react-moralis"
 import { contractAddresses, abi } from "../constants"
-// dont export from moralis when using react
-import { useMoralis } from "react-moralis"
+import { useMoralis } from "react-moralis" // Do not export from Moralis when using React
 import { useEffect, useState } from "react"
 import { useNotification } from "web3uikit"
 import { ethers } from "ethers"
 
 export default function LotteryEntrance() {
     const { Moralis, isWeb3Enabled, chainId: chainIdHex } = useMoralis()
-    // These get re-rendered every time due to our connect button!
+    
+    // These get re-rendered every time due to our connect button
     const chainId = parseInt(chainIdHex)
     // console.log(`ChainId is ${chainId}`)
     const raffleAddress = chainId in contractAddresses ? contractAddresses[chainId][0] : null
@@ -18,7 +18,6 @@ export default function LotteryEntrance() {
     const [entranceFee, setEntranceFee] = useState("0")
     const [numberOfPlayers, setNumberOfPlayers] = useState("0")
     const [recentWinner, setRecentWinner] = useState("0")
-
     const dispatch = useNotification()
 
     const {
@@ -71,21 +70,21 @@ export default function LotteryEntrance() {
         setNumberOfPlayers(numPlayersFromCall)
         setRecentWinner(recentWinnerFromCall)
     }
-
+    
+    // No list means it'll update everytime anything changes or happens
+    // Empty list means it'll run once after the initial rendering
+    // Dependencies mean it'll run whenever those things in the list change
     useEffect(() => {
         if (isWeb3Enabled) {
             updateUIValues()
         }
     }, [isWeb3Enabled])
-    // no list means it'll update everytime anything changes or happens
-    // empty list means it'll run once after the initial rendering
-    // and dependencies mean it'll run whenever those things in the list change
 
-    // An example filter for listening for events, we will learn more on this next Front end lesson
+    // An example filter for listening for events
     // const filter = {
     //     address: raffleAddress,
     //     topics: [
-    //         // the name of the event, parnetheses containing the data type of each event, no spaces
+    //         // The name of the event, parnetheses containing the data type of each event, no spaces
     //         utils.id("RaffleEnter(address)"),
     //     ],
     // }
