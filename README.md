@@ -102,8 +102,6 @@ yarn next export
 
 4. Copy the CID of the folder you pinned
 
-![IPFS](./img/readme-ipfs.png)
-
 5. Get [IPFS companion](https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch?hl=en) for your browser
 
 6. Go to `ipfs://YOUR_CID_HERE` and see your IPFS deployed site!
