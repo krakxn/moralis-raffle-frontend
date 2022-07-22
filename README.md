@@ -1,64 +1,24 @@
-# nextjs-moralis-raffle
-
-Built with ❤️ using:
-NextJS
-Solidity
-Chainlink
-Moralis
-web3uikit
-Ethers
-Hardhat
-IPFS
-
-- [nextjs-moralis-raffle](#nextjs-moralis-raffle)
-- [Getting Started](#getting-started)
-  - [Requirements](#requirements)
-  - [Quickstart](#quickstart)
-  - [Typescript](#typescript)
-    - [Optional Gitpod](#optional-gitpod)
-  - [Formatting in VSCode](#formatting-in-vscode)
-- [Useage](#useage)
-  - [Testing](#testing)
-- [Deploying to IPFS](#deploying-to-ipfs)
-- [Deploy to IPFS using Fleek](#deploy-to-ipfs-using-fleek)
-- [Linting](#linting)
-- [Thank you!](#thank-you)
+# SmartContract Raffle/Lottery - Next.js, Moralis:
 
 # Getting Started
 
-## Requirements
-
-- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-  - You'll know you did it right if you can run `git --version` and you see a response like `git version x.x.x`
-- [Nodejs](https://nodejs.org/en/)
-  - You'll know you've installed nodejs right if you can run:
-    - `node --version` and get an ouput like: `vx.x.x`
-- [Yarn](https://yarnpkg.com/getting-started/install) instead of `npm`
-  - You'll know you've installed yarn right if you can run:
-    - `yarn --version` and get an output like: `x.x.x`
-    - You might need to [install it with `npm`](https://classic.yarnpkg.com/lang/en/docs/install/) or `corepack`
-
 ## Quickstart
 
+*Note: `url` refers to the repo's, `path` refers to the path of the cloned repo in your local directory*
 ```
 git clone `url`
-cd nextjs-smartcontract-lottery-fcc
+cd `path`
 yarn
 yarn dev
 ```
 
-## Typescript
+## TypeScript
 
-If you want to get to typescript and you cloned the javascript version, just run:
+If you want to get to TypeScript and you cloned the JavaScript version, just run:
 
 ```
 git checkout typescript
 ```
-
-### Optional Gitpod
-
-If you can't or don't want to run and install locally, you can work with this repo in Gitpod. If you do this, you can skip the `clone this repo` part.
-
 
 ## Formatting in VSCode
 
@@ -73,7 +33,7 @@ To have VSCode extension prettier auto-format `.jsx` and `.tsx`, add the followi
   }
 ```
 
-# Useage
+# Usage
 
 1. Run your local blockchain with the lottery code
 
@@ -81,15 +41,15 @@ To have VSCode extension prettier auto-format `.jsx` and `.tsx`, add the followi
 
 ```
 git clone `url`
-cd hardhat-fund-me-fcc
+cd `path`
 yarn 
 yarn hardhat node
 ```
 
 
-1. Add hardhat network to your metamask/wallet
+1. Add hardhat network to your MetaMask/wallet
 
-- Get the RPC_URL of your hh node (usually `http://127.0.0.1:8545/`)
+- Get the RPC_URL of your Hardhat node (usually `http://127.0.0.1:8545/`)
 - Go to your wallet and add a new network. [See instructions here.](https://metamask.zendesk.com/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC)
   - Network Name: Hardhat-Localhost
   - New RPC URL: http://127.0.0.1:8545/
@@ -97,7 +57,7 @@ yarn hardhat node
   - Currency Symbol: ETH (or GO)
   - Block Explorer URL: None
 
-Ideally, you'd then [import one of the accounts](https://metamask.zendesk.com/hc/en-us/articles/360015489331-How-to-import-an-Account) from hardhat to your wallet/metamask. 
+Ideally, you'd then [import one of the accounts](https://metamask.zendesk.com/hc/en-us/articles/360015489331-How-to-import-an-Account) from Hardhat to your wallet/MetaMask. 
 
 3. Run this code
 
@@ -114,7 +74,7 @@ Head over to your [localhost](http://localhost:3000) and play with the lottery!
 
 ## Testing
 
-I didn't write any front end tests 😢
+I didn't write any front end tests :(
 
 If you'd like to create some tests for this repo, please make a PR!
 
@@ -144,9 +104,9 @@ yarn next export
 
 ![IPFS](./img/readme-ipfs.png)
 
-5. Get [IPFS companion](https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch?hl=en) for your browser (or use [Brave Browser](https://brave.com/))
+5. Get [IPFS companion](https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch?hl=en) for your browser
 
-5. Go to `ipfs://YOUR_CID_HERE` and see your ipfs deployed site!
+6. Go to `ipfs://YOUR_CID_HERE` and see your IPFS deployed site!
 
 
 # Deploy to IPFS using Fleek
